@@ -44,8 +44,6 @@ export class Repository {
       return;
     }
 
-    failRandomly();
-
     return new StoryEntity(
       story.status,
       story.assets,

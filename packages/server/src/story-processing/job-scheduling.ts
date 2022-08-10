@@ -13,8 +13,6 @@ export class JobScheduling {
       return;
     }
 
-    failRandomly();
-
     if (story.status === ProcessingStatus.Downloading) {
       story.update({ status: ProcessingStatus.Canceling });
     } else {
@@ -30,8 +28,6 @@ export class JobScheduling {
       return;
     }
 
-    failRandomly();
-
     story.update({ status: ProcessingStatus.Scheduled });
   }
 
@@ -42,8 +38,6 @@ export class JobScheduling {
       console.log(`Story not found, skipping clean schedule`);
       return;
     }
-
-    failRandomly();
 
     story.update({ status: ProcessingStatus.ScheduledCleaning });
   }
