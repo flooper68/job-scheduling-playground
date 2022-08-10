@@ -1,13 +1,21 @@
 {
-  "name": "@processing/shared",
+  "name": "@processing/asset-worker",
   "version": "1.0.0",
   "main": "dist/index.js",
   "types": "src/index.ts",
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "build:watch": "npx swc ./src -d ./dist --watch ./src --delete-dir-on-start",
+    "start": "node --experimental-specifier-resolution=node ./dist/index.js",
+    "dev": "nodemon",
     "build": "npx swc ./src -d ./dist --delete-dir-on-start"
+  },
+  "dependencies": {
+    "@processing/asset-processing-contract": "1.0.0",
+    "@processing/common": "^1.0.0",
+    "axios": "^0.27.2",
+    "bullmq": "^1.87.1",
+    "ioredis": "^5.2.2"
   },
   "devDependencies": {
     "@swc/cli": "^0.1.57",

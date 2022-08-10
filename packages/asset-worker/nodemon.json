@@ -1,0 +1,7 @@
+{
+  "exec": "yarn build && yarn start",
+  "ignore": ["dist"],
+  "watch": ["src", "../shared/src"],
+  "ext": "ts",
+  "delay": 500
+}

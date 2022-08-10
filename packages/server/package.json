@@ -6,12 +6,15 @@
   "type": "module",
   "scripts": {
     "start": "node --experimental-specifier-resolution=node ./dist/index.js",
-    "start:watch": "nodemon",
+    "dev": "nodemon",
     "build": "npx swc ./src -d ./dist --delete-dir-on-start"
   },
   "dependencies": {
-    "@processing/shared": "1.0.0",
+    "@processing/client-contract": "1.0.0",
+    "@processing/asset-processing-contract": "1.0.0",
     "bullmq": "^1.87.1",
+    "fastify": "^4.4.0",
+    "fastify-socket.io": "^4.0.0",
     "socket.io": "^4.5.1"
   },
   "devDependencies": {

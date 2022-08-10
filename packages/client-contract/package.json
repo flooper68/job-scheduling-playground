@@ -1,0 +1,19 @@
+{
+  "name": "@processing/client-contract",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "src/index.ts",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "build:watch": "npx swc ./src -d ./dist --watch ./src --delete-dir-on-start",
+    "build": "npx swc ./src -d ./dist --delete-dir-on-start"
+  },
+  "devDependencies": {
+    "@swc/cli": "^0.1.57",
+    "@swc/core": "^1.2.224",
+    "nodemon": "^2.0.19",
+    "prettier": "^2.7.1",
+    "typescript": "^4.7.4"
+  }
+}
